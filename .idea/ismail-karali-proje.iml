@@ -1,7 +1,20 @@
-package banking;
+package banking.model;
 
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Banking System Started");
+public abstract class Account {
+
+    private double balance;
+
+    public Account(double balance) {
+        this.balance = balance;
     }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    protected void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public abstract void withdraw(double amount);
 }
